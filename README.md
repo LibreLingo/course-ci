@@ -1,2 +1,2 @@
 # course-ci
-A GitHub action that automated parts of the development of LibreLingo courses
+A GitHub action that automates parts of the development of LibreLingo courses
