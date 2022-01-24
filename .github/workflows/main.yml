@@ -12,3 +12,7 @@ jobs:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
+      - name: Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
