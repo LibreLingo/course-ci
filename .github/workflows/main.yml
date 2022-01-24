@@ -3,15 +3,11 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Verify course contribution
     steps:
       - uses: actions/checkout@v2
       - id: foo
         uses: ./
-        with:
-          who-to-greet: 'Mona the Octocat'
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
       - name: Release
         run: npx semantic-release
         env:
