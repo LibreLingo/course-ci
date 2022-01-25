@@ -6,8 +6,13 @@ jobs:
     name: Verify course contribution
     steps:
       - uses: actions/checkout@v2
-      - id: foo
-        uses: ./
+      - uses: actions/checkout@v2
+        with:
+          repository: LibreLingo/LibreLingo-ES-from-EN
+          path: test-course
+      - run: cp -r ./test-course/course/* .
+        shell: bash
+      - uses: ./
       - name: Release
         run: npx semantic-release
         env:
