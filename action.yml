@@ -10,5 +10,5 @@ runs:
       run: pip install librelingo-json-export
       shell: bash
     - name: Verify that the course can be exported to JSON
-      run: librelingo-export-cli . /tmp
+      run: librelingo-export-cli ./course/ /tmp
       shell: bash

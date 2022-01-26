@@ -10,7 +10,7 @@ jobs:
         with:
           repository: LibreLingo/LibreLingo-ES-from-EN
           path: test-course
-      - run: cp -r ./test-course/course/* .
+      - run: cp -r ./test-course/* .
         shell: bash
       - uses: ./
       - name: Release
