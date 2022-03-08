@@ -12,3 +12,6 @@ runs:
     - name: Verify that the course can be exported to JSON
       run: librelingo-export-cli ./course/ /tmp
       shell: bash
+    - name: Deploy preview using vercel
+      run: ./deploy-preview.sh
+      shell: bash
