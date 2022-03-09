@@ -3,10 +3,6 @@ description: 'Verify course contribution'
 runs:
   using: "composite"
   steps:
-    - name: List files for debugging purposes
-      shell: bash
-      run: find .
-
     - name: Install librelingo-json-export
       shell: bash
       run: pip install librelingo-json-export
@@ -19,6 +15,8 @@ runs:
       shell: bash
       run: |
         echo "Hello World Test"
+        wget https://github.com/LibreLingo/LibreLingo/archive/refs/heads/main.zip
+        find .
 
     - name: Create "last passing" tag
       uses: rickstaa/action-create-tag@v1
