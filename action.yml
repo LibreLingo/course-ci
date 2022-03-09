@@ -13,7 +13,8 @@ runs:
       run: librelingo-export-cli ./course/ /tmp
       shell: bash
     - name: Deploy preview using vercel
-      run: ./deploy-preview.sh
+      run: |
+        echo "Hello World Test"
       shell: bash
     - name: Create "last passing" tag
       uses: rickstaa/action-create-tag@v1
