@@ -4,18 +4,22 @@ runs:
   using: "composite"
   steps:
     - name: List files for debugging purposes
+      shell: bash
       run: find .
-      shell: bash
+
     - name: Install librelingo-json-export
+      shell: bash
       run: pip install librelingo-json-export
-      shell: bash
+
     - name: Verify that the course can be exported to JSON
-      run: librelingo-export-cli ./course/ /tmp
       shell: bash
+      run: librelingo-export-cli ./course/ /tmp
+
     - name: Deploy preview using vercel
+      shell: bash
       run: |
         echo "Hello World Test"
-      shell: bash
+
     - name: Create "last passing" tag
       uses: rickstaa/action-create-tag@v1
       if: ${{ success() && github.ref == 'refs/heads/main' }} 
